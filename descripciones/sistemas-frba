@@ -1,0 +1,4 @@
+paquete="sistemas-frba"
+nombre="Ingenieria en Sistemas de la FRBA"
+instala="la carrera de $nombre"
+dependencias="sistemas-frba-1, sistemas-frba-2, sistemas-frba-3, sistemas-frba-4, sistemas-frba-5"
