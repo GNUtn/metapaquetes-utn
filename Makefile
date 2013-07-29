@@ -2,7 +2,7 @@ DESCRIPCIONES=$(wildcard descripciones/*)
 CONTROLFILES=$(DESCRIPCIONES:descripciones/%=controlfiles/%)
 DEBS=$(wildcard debs/*)
 
-all: debs/
+all: update
 
 controlfiles/%: descripciones/%
 	mkdir -p controlfiles/
@@ -18,4 +18,7 @@ clean:
 clean-all: clean
 	rm -rf debs/
 
-.PHONY: all clean clean-all
+update: debs/
+	reprepro -b ../reprepro/utncillo/ includedeb lombardi debs/*
+
+.PHONY: all clean clean-all update
